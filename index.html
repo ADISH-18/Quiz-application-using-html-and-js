@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is CSS?</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* .option li {
+            background-color: rgb(177, 232, 240);
+            color: black;
+            cursor: pointer;
+            margin-bottom: 5px;
+            padding: 10px;
+        }
+        .option li span {
+            background-color: rgb(122, 230, 247);
+            padding: 5px;
+            margin-right: 10px;
+        } */
+        .quiz {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="quiz">
+        <div class="container">
+            <div class="heading">
+                <h1>What is CSS?</h1>
+            </div>
+            <div class="option">
+                <ul>
+                    <div class="list">
+                        <li onclick="answers(this)" class="answer"><span class="true">A</span>Cascading Style Sheets
+                        </li>
+                        <li onclick="answers(this)" class="wrong"><span class="false">B</span>Colorful Style Sheets</li>
+                        <li onclick="answers(this)" class="wrong"><span class="false">C</span>Command Style Sheets</li>
+                        <li onclick="answers(this)" class="wrong"><span class="false">D</span>Controlled style sheet
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="heading">
+                <h1>What is HTML?</h1>
+            </div>
+            <div class="option">
+                <ul>
+                    <div class="list">
+                        <li onclick="answers(this)" class="answer"><span class="true">A</span>HyperText Markup Language
+                        </li>
+                        <li onclick="answers(this)" class="wrong"><span class="false">B</span>HighText Machine Language
+                        </li>
+                        <li onclick="answers(this)" class="wrong"><span class="false">C</span>Hyperlink and Text Markup
+                            Language</li>
+                        <li onclick="answers(this)" class="wrong"><span class="false">D</span>Home Tool Markup Language
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="heading">
+                <h1>What is JavaScript?</h1>
+            </div>
+            <div class="option">
+                <ul>
+                    <div class="list">
+                        <li onclick="answers(this)" class="answer"><span class="true">A</span>A programming language
+                        </li>
+                        <li onclick="answers(this)" class="wrong"><span class="false">B</span>A scripting language</li>
+                        <li onclick="answers(this)" class="wrong"><span class="false">C</span>A style sheet language
+                        </li>
+                        <li onclick="answers(this)" class="wrong"><span class="false">D</span>A markup language</li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="heading">
+                <h1>What is Python?</h1>
+            </div>
+            <div class="option">
+                <ul>
+                    <div class="list">
+                        <li onclick="answers(this)" class="answer"><span class="true">A</span>A programming language
+                        </li>
+                        <li onclick="answers(this)" class="wrong"><span class="false">B</span>A type of snake</li>
+                        <li onclick="answers(this)" class="wrong"><span class="false">C</span>A kind of food</li>
+                        <li onclick="answers(this)" class="wrong"><span class="false">D</span>A comic book character
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="heading">
+                <h1>What is SQL?</h1>
+            </div>
+            <div class="option">
+                <ul>
+                    <div class="list">
+                        <li onclick="answers(this)" class="answer"><span class="true">A</span>Structured Query Language
+                        </li>
+                        <li onclick="answers(this)" class="wrong"><span class="false">B</span>Strong Question Language
+                        </li>
+                        <li onclick="answers(this)" class="wrong"><span class="false">C</span>Stylish Question Language
+                        </li>
+                        <li onclick="answers(this)" class="wrong"><span class="false">D</span>Statement Question
+                            Language</li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    function answers(element) {
+        let options = element.parentNode.querySelectorAll('li');
+        options.forEach(option => {
+            option.style.backgroundColor = 'rgb(177, 232, 240)';
+            option.style.color = 'black';
+            option.querySelector('span').style.backgroundColor = 'rgb(122, 230, 247)';
+        });
+        if (element.classList.contains("answer")) {
+            element.style.backgroundColor = "green";
+            element.style.color = "white";
+            element.querySelector('span').style.backgroundColor = "green";
+        } else {
+            element.style.backgroundColor = "red";
+            element.style.color = "white";
+            element.querySelector('span').style.backgroundColor = "red";
+        }
+    }
+</script>
+
+</html>

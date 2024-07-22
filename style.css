@@ -1,0 +1,30 @@
+body{
+    display: flex;
+    background-color: #f5f5f5;
+    font-family: 'Open Sans', sans-serif;
+    justify-content: center;
+
+}
+.container{
+    width: 500px;
+    border-radius: 10px;
+    background-color: bisque;
+    border-color: black;
+}
+h1{
+    text-align: center;
+}
+li{
+    background-color:  rgb(177, 232, 240);
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    margin: 10px;
+    width: 88%;
+    align-items: center;
+}
+span{
+    padding:20px;
+    background-color: rgb(122, 230, 247);
+    border-radius: 10px 0 0px 10px;
+}
